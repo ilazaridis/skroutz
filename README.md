@@ -39,7 +39,7 @@ The query string is passd as associative array using the params() method.
 In case we have multiple values of the same parameter (i.e. ```filter_ids[]```), we are passing them as comma seperated values:
 - Filter SKUs of specific category using multiple filter ids
 ```php
-$client->category('40')->skus()->params(['filter_ids[]' => '355559,6282']);
+$client->category('40')->skus()->params(['filter_ids[]' => '355559,6282'])->fetch()
 ```
 ## Note
 Some of the API methods have not been implemented due to access restriction. Currently,
